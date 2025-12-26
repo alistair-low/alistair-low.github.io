@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            @keyframes ticker {
+                0% {
+                    transform: translate3d(0, 0, 0);
+                    visibility: visible;
+                }
+
+                100% {
+                    transform: translate3d(-100%, 0, 0);
+                }
+            }
+
+            body {
+                --bg-color: #EFCC13;
+                --text-color: black;
+
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                font-family: Outfit, sans-serif;
+                font-size: 70vh;
+                line-height: 100vh;
+                text-transform: uppercase;
+                width: 100%;
+                padding-left: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            ol, li {
+                display: inline-block;
+            }
+
+            body > ol {
+                padding-right: 100%;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-name: ticker;
+                animation-duration: 60s;
+            }
+
+            body > ol > li:not(:last-child)::after {
+                content: "\2022";
+                padding: 1em;
+            }
+
+            li li {
+                padding-left: 0.6em;
+            }
+
+            .club {
+                background-color: var(--text-color);
+                color: var(--bg-color);
+                padding: 0 0.4em;
+                margin-left: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li>
+                Today's Lineups
+                <span class="club">RAI</span>
+                <ol>
+                    <li>1 Rae</li>
+                    <li>2 Rowe</li>
+                    <li>4 Hanlon</li>
+                    <li>6 O'Connor</li>
+                    <li>8 Matthews</li>
+                    <li>9 Hamilton</li>
+                    <li>18 McMullan</li>
+                    <li>20 Brown</li>
+                    <li>22 Doherty</li>
+                    <li>23 Easton</li>
+                    <li>26 Stevenson</li>
+                </ol>
+                <span class="club">DUN</span>
+                <ol>
+                    <li>40 Terrell</li>
+                    <li>2 Chilikoa-Mullen</li>
+                    <li>3 Ngwenya</li>
+                    <li>5 Hamilton</li>
+                    <li>8 Gilmour</li>
+                    <li>9 Rudden</li>
+                    <li>10 Todd</li>
+                    <li>16 Macleod</li>
+                    <li>26 A. Tod</li>
+                    <li>33 Cooper</li>
+                    <li>47 Fraser</li>
+                </ol>
+            </li>
+            <li>
+                Weather
+                <ol>
+                    <li>&#9729; 10&deg;C</li>
+                </ol>
+            </li>
+            <li>
+                Pie of the Week - Doner Meat with Baba's Sauce
+            </li>
+            <li>
+                Pick up your matchday poster signed by Grace Fowlie and Laura Andreucci in the club shop!
+            </li>
+            <li>
+                Happy Birthday Bart Simpson! Love from Mum, Dad, Grandpa, Lisa & Maggie
+            </li>
+            <li>
+                Welcome to your first game, Ralph Wiggum!
+            </li>
+        </ol>
+    </body>
+</html>
